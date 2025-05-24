@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film Streaming AGC</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-black text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">NontonGratis</h1>
+      <form action="#" method="GET" class="flex items-center">
+        <input type="text" name="q" placeholder="Cari film..." class="rounded-l p-1 text-black" />
+        <button type="submit" class="bg-red-600 px-2 py-1 rounded-r">Cari</button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container mx-auto py-6">
+    <h2 class="text-2xl font-semibold mb-4">Film Terbaru</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Kartu Film 1 -->
+      <a href="?page=detail&id=1" class="bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x450?text=Film+1" alt="Poster Film 1" class="rounded-t">
+        <div class="p-2">
+          <h3 class="text-sm font-medium">Avenger: Final War</h3>
+          <p class="text-xs text-gray-500">2025</p>
+        </div>
+      </a>
+      <!-- Kartu Film 2 -->
+      <a href="?page=detail&id=2" class="bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x450?text=Film+2" alt="Poster Film 2" class="rounded-t">
+        <div class="p-2">
+          <h3 class="text-sm font-medium">Fast & Furious 12</h3>
+          <p class="text-xs text-gray-500">2024</p>
+        </div>
+      </a>
+      <!-- Kartu Film 3 -->
+      <a href="?page=detail&id=3" class="bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x450?text=Film+3" alt="Poster Film 3" class="rounded-t">
+        <div class="p-2">
+          <h3 class="text-sm font-medium">The Batman Beyond</h3>
+          <p class="text-xs text-gray-500">2023</p>
+        </div>
+      </a>
+      <!-- Kartu Film 4 -->
+      <a href="?page=detail&id=4" class="bg-white rounded shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x450?text=Film+4" alt="Poster Film 4" class="rounded-t">
+        <div class="p-2">
+          <h3 class="text-sm font-medium">Jujutsu Kaisen 0</h3>
+          <p class="text-xs text-gray-500">2022</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Halaman Detail Film -->
+    <div class="mt-10 bg-white p-6 rounded shadow" id="detail">
+      <h2 class="text-2xl font-bold mb-2">Avenger: Final War</h2>
+      <p class="text-gray-600 mb-4">Tahun: 2025 | Genre: Action, Sci-Fi</p>
+      <div class="aspect-video mb-4">
+        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <p class="text-sm text-gray-700">
+        Dunia kembali dalam ancaman besar saat musuh multiverse muncul dan memaksa semua Avenger dari berbagai realitas bersatu untuk perang terakhir. Film ini adalah hasil AGC dari sumber eksternal.
+      </p>
+    </div>
+  </main>
+
+  <footer class="bg-black text-white p-4 text-center">
+    <p>&copy; 2025 NontonGratis. Auto-generated content only.</p>
+  </footer>
+
+  <!-- Script Simulasi Backend Scraping -->
+  <script>
+    async function autoGrabContent() {
+      const response = await fetch('/api/scrape.php');
+      const data = await response.json();
+      console.log('Data hasil scrape:', data);
+    }
+    // Jadwalkan scraping (simulasi cronjob)
+    window.addEventListener('load', () => {
+      // autoGrabContent(); // aktifkan ini di backend nyata
+    });
+  </script>
+</body>
+</html>
